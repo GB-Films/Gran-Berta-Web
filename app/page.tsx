@@ -3,13 +3,11 @@ const socialLinks = [
     name: 'Instagram',
     handle: '@granberta',
     href: 'https://www.instagram.com/granberta',
-    className: 'social-link social-link--primary',
   },
   {
     name: 'TikTok',
     handle: '@granberta',
     href: 'https://www.tiktok.com/@granberta',
-    className: 'social-link social-link--secondary',
   },
 ];
 
@@ -44,13 +42,11 @@ export default function Home() {
         <h1 id="brand-title" className="sr-only">
           Gran Berta
         </h1>
-        <p className="intro">Donde las historias encuentran su forma.</p>
-
         <nav className="social-grid" aria-label="Redes sociales de Gran Berta">
           {socialLinks.map((link) => (
             <a
               key={link.name}
-              className={link.className}
+              className="social-link"
               href={link.href}
               target="_blank"
               rel="noreferrer"
