@@ -30,13 +30,13 @@ export default function Home() {
         <picture className="brand-lockup">
           <source
             media="(max-width: 640px)"
-            srcSet="/brand/gran-berta-vertical.png"
+            srcSet="/optimized/gran-berta-vertical.webp"
           />
           <img
-            src="/brand/gran-berta-isologo.png"
+            src="/optimized/gran-berta-isologo.webp"
             alt="Gran Berta"
-            width="2974"
-            height="1083"
+            width="1600"
+            height="583"
             fetchPriority="high"
           />
         </picture>

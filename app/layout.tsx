@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: 'Donde las historias encuentran su forma.',
     images: [
       {
-        url: '/og.png',
+        url: '/optimized/og.jpg',
         width: 1200,
         height: 630,
         alt: 'Gran Berta — Films, ideas y contenido',
@@ -30,11 +30,11 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Gran Berta | Films, ideas y contenido',
     description: 'Donde las historias encuentran su forma.',
-    images: ['/og.png'],
+    images: ['/optimized/og.jpg'],
   },
   icons: {
-    icon: '/brand/gran-berta-vertical.png',
-    apple: '/brand/gran-berta-vertical.png',
+    icon: '/optimized/gran-berta-icon.png',
+    apple: '/optimized/gran-berta-icon.png',
   },
 };
 
