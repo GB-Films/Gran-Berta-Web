@@ -232,7 +232,7 @@ a {
 
 .footer-mark {
   position: absolute;
-  right: 34px;
+  left: 50%;
   bottom: 29px;
   z-index: 3;
   margin: 0;
@@ -240,6 +240,9 @@ a {
   font-size: 0.58rem;
   font-weight: 800;
   letter-spacing: 0.2em;
+  text-align: center;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
 .sr-only {
@@ -296,7 +299,7 @@ a {
   }
 
   .footer-mark {
-    right: 24px;
+    left: 50%;
     bottom: 22px;
   }
 }

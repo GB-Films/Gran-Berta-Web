@@ -68,7 +68,7 @@ export default function Home() {
         </nav>
       </section>
 
-      <p className="footer-mark">SEGUINOS / FOLLOW THE STORY</p>
+      <p className="footer-mark">CONTANDO HISTORIAS DESDE 2015</p>
     </main>
   );
 }
