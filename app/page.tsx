@@ -13,6 +13,11 @@ const socialLinks = [
     handle: '@granberta',
     href: 'https://www.tiktok.com/@granberta',
   },
+  {
+    name: 'YouTube',
+    handle: '@granberta_',
+    href: 'https://www.youtube.com/@granberta_',
+  },
 ];
 
 export default function Home() {
