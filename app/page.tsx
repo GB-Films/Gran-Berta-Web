@@ -34,8 +34,16 @@ export default function Home() {
             <span className="frame-link frame-link--pending" aria-label="XETUP, enlace próximamente">
               XETUP
             </span>
-            <a href="mailto:info@granbertafilms.com">INFO@GRANBERTAFILMS.COM</a>
-            <a href="mailto:agustin@granberta.com">AGUSTIN@GRANBERTA.COM</a>
+            <a
+              className="frame-mail"
+              href="mailto:info@granbertafilms.com,agustin@granberta.com?subject=Contacto%20desde%20Gran%20Berta"
+              aria-label="Escribirnos por mail"
+              title="Escribirnos por mail"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3.5 5.5h17v13h-17zM4 6l8 6 8-6" />
+              </svg>
+            </a>
           </nav>
         </div>
       </div>

@@ -141,6 +141,22 @@ a {
   opacity: 1;
 }
 
+.frame-mail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frame-mail svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
 .frame-link--pending {
   color: rgb(255 232 0 / 52%);
   cursor: default;
