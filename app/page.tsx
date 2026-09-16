@@ -19,7 +19,21 @@ export default function Home() {
 
       <div className="frame" aria-hidden="true">
         <span>GB / 2026</span>
-        <span>BUENOS AIRES</span>
+        <div className="frame-contact">
+          <span>BUENOS AIRES</span>
+          <nav className="frame-links" aria-label="Sitios de Gran Berta">
+            <a href="https://granbertafilms.com/" target="_blank" rel="noreferrer">
+              GB FILMS
+            </a>
+            <a href="https://bani-vfx.com/" target="_blank" rel="noreferrer">
+              BANI VFX
+            </a>
+            <a href="https://gb-films.github.io/Totem/" target="_blank" rel="noreferrer">
+              TOTEM
+            </a>
+            <a href="mailto:info@granbertafilms.com">INFO@GRANBERTAFILMS.COM</a>
+          </nav>
+        </div>
       </div>
 
       <section className="hero" aria-labelledby="brand-title">
