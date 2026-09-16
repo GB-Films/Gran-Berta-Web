@@ -1,3 +1,7 @@
+'use client';
+
+import { type FormEvent, useState } from 'react';
+
 const socialLinks = [
   {
     name: 'Instagram',
@@ -12,6 +16,24 @@ const socialLinks = [
 ];
 
 export default function Home() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+  const [contactSubmitted, setContactSubmitted] = useState(false);
+
+  function handleContactSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const subject = `Contacto desde Gran Berta — ${form.get('name') ?? ''}`;
+    const body = [
+      `Nombre: ${form.get('name') ?? ''}`,
+      `Email: ${form.get('email') ?? ''}`,
+      '',
+      `${form.get('message') ?? ''}`,
+    ].join('\n');
+
+    window.location.href = `mailto:info@granbertafilms.com,agustin@granberta.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setContactSubmitted(true);
+  }
+
   return (
     <main className="landing">
       <div className="ambient ambient--one" aria-hidden="true" />
@@ -34,16 +56,22 @@ export default function Home() {
             <span className="frame-link frame-link--pending" aria-label="XETUP, enlace próximamente">
               XETUP
             </span>
-            <a
+            <button
               className="frame-mail"
-              href="mailto:info@granbertafilms.com,agustin@granberta.com?subject=Contacto%20desde%20Gran%20Berta"
+              type="button"
               aria-label="Escribirnos por mail"
               title="Escribirnos por mail"
+              aria-expanded={isContactOpen}
+              aria-controls="contact-modal"
+              onClick={() => {
+                setContactSubmitted(false);
+                setIsContactOpen(true);
+              }}
             >
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M3.5 5.5h17v13h-17zM4 6l8 6 8-6" />
               </svg>
-            </a>
+            </button>
           </nav>
         </div>
       </div>
@@ -95,6 +123,61 @@ export default function Home() {
       </section>
 
       <p className="footer-mark">CONTANDO HISTORIAS DESDE 2015</p>
+
+      {isContactOpen ? (
+        <div
+          className="contact-modal"
+          id="contact-modal"
+          role="presentation"
+          onMouseDown={() => setIsContactOpen(false)}
+        >
+          <section
+            className="contact-dialog"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="contact-title"
+            tabIndex={-1}
+            onMouseDown={(event) => event.stopPropagation()}
+            onKeyDown={(event) => {
+              if (event.key === 'Escape') setIsContactOpen(false);
+            }}
+          >
+            <button
+              className="contact-close"
+              type="button"
+              aria-label="Cerrar ventana de contacto"
+              onClick={() => setIsContactOpen(false)}
+            >
+              ×
+            </button>
+            <p className="contact-kicker">CONTACTO</p>
+            <h2 id="contact-title">Hablemos</h2>
+            <p className="contact-intro">Contanos qué tenés en mente.</p>
+
+            <form className="contact-form" onSubmit={handleContactSubmit}>
+              <label>
+                Nombre
+                <input name="name" type="text" autoComplete="name" required />
+              </label>
+              <label>
+                Email
+                <input name="email" type="email" autoComplete="email" required />
+              </label>
+              <label>
+                Mensaje
+                <textarea name="message" rows={4} required />
+              </label>
+              <button className="contact-submit" type="submit">
+                ENVIAR MENSAJE ↗
+              </button>
+            </form>
+
+            {contactSubmitted ? (
+              <p className="contact-note">Se abrió tu aplicación de correo con el mensaje listo para enviar.</p>
+            ) : null}
+          </section>
+        </div>
+      ) : null}
     </main>
   );
 }

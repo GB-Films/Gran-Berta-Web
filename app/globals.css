@@ -145,6 +145,11 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
 }
 
 .frame-mail svg {
@@ -160,6 +165,140 @@ a {
 .frame-link--pending {
   color: rgb(255 232 0 / 52%);
   cursor: default;
+}
+
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgb(0 0 0 / 78%);
+  backdrop-filter: blur(10px);
+}
+
+.contact-dialog {
+  position: relative;
+  width: min(100%, 520px);
+  max-height: calc(100svh - 48px);
+  overflow-y: auto;
+  padding: 42px clamp(24px, 5vw, 52px) 34px;
+  border: 1px solid var(--yellow);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 50% 0%, rgb(255 232 0 / 10%), transparent 48%),
+    #090909;
+  box-shadow: 0 24px 90px rgb(0 0 0 / 52%);
+}
+
+.contact-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: transparent;
+  color: var(--yellow);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.contact-close:hover,
+.contact-close:focus-visible {
+  color: var(--white);
+}
+
+.contact-kicker {
+  margin: 0 0 14px;
+  color: var(--yellow);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.28em;
+}
+
+.contact-dialog h2 {
+  margin: 0;
+  color: var(--white);
+  font-size: clamp(2rem, 6vw, 3.3rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 0.95;
+}
+
+.contact-intro {
+  margin: 12px 0 28px;
+  color: rgb(255 255 255 / 66%);
+  font-size: 1rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 17px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  color: rgb(255 255 255 / 74%);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgb(255 232 0 / 42%);
+  border-radius: 9px;
+  background: rgb(255 255 255 / 6%);
+  color: var(--white);
+  font: inherit;
+  font-size: 1rem;
+  letter-spacing: 0;
+  outline: none;
+  padding: 12px 13px;
+  resize: vertical;
+  text-transform: none;
+  transition: border-color 180ms ease, background-color 180ms ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--yellow);
+  background: rgb(255 232 0 / 8%);
+}
+
+.contact-submit {
+  margin-top: 6px;
+  padding: 14px 18px;
+  border: 2px solid var(--yellow);
+  border-radius: 9px;
+  background: var(--yellow);
+  color: var(--black);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+.contact-submit:hover,
+.contact-submit:focus-visible {
+  background: transparent;
+  color: var(--yellow);
+}
+
+.contact-note {
+  margin: 18px 0 0;
+  color: rgb(255 232 0 / 82%);
+  font-size: 0.78rem;
+  line-height: 1.45;
 }
 
 .hero {
