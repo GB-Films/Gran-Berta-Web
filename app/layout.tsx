@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://granberta.com'),
   title: 'Gran Berta | Films, ideas y contenido',
   description:
-    'Gran Berta. Historias, ideas y contenido desde Buenos Aires. Encontranos en Instagram y TikTok.',
+    'Gran Berta. Historias, ideas y contenido audiovisual. Encontranos en Instagram, TikTok y YouTube.',
   applicationName: 'Gran Berta',
   alternates: {
     canonical: '/',

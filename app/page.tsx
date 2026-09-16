@@ -52,6 +52,9 @@ export default function Home() {
             <a href="https://gb-films.github.io/Totem/" target="_blank" rel="noreferrer">
               TOTEM
             </a>
+            <a href="https://www.youtube.com/@granberta_" target="_blank" rel="noreferrer">
+              YOUTUBE
+            </a>
             <span className="frame-link frame-link--pending" aria-label="XETUP, enlace próximamente">
               XETUP
             </span>
