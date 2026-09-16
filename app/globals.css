@@ -130,7 +130,8 @@ a {
   letter-spacing: 0.14em;
 }
 
-.frame-links a {
+.frame-links a,
+.frame-link {
   transition: color 180ms ease, opacity 180ms ease;
 }
 
@@ -138,6 +139,11 @@ a {
 .frame-links a:focus-visible {
   color: var(--white);
   opacity: 1;
+}
+
+.frame-link--pending {
+  color: rgb(255 232 0 / 52%);
+  cursor: default;
 }
 
 .hero {

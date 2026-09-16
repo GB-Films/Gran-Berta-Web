@@ -31,7 +31,11 @@ export default function Home() {
             <a href="https://gb-films.github.io/Totem/" target="_blank" rel="noreferrer">
               TOTEM
             </a>
+            <span className="frame-link frame-link--pending" aria-label="XETUP, enlace próximamente">
+              XETUP
+            </span>
             <a href="mailto:info@granbertafilms.com">INFO@GRANBERTAFILMS.COM</a>
+            <a href="mailto:agustin@granberta.com">AGUSTIN@GRANBERTA.COM</a>
           </nav>
         </div>
       </div>
