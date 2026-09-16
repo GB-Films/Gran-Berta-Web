@@ -23,7 +23,11 @@ export default function Home() {
       </div>
 
       <section className="hero" aria-labelledby="brand-title">
-        <p className="eyebrow">Films · Ideas · Contenido</p>
+        <p className="eyebrow">
+          Un universo en el que
+          <br />
+          sí querés, podés
+        </p>
 
         <picture className="brand-lockup">
           <source
