@@ -42,7 +42,6 @@ export default function Home() {
       <div className="frame" aria-hidden="true">
         <span>GB / 2026</span>
         <div className="frame-contact">
-          <span>BUENOS AIRES</span>
           <nav className="frame-links" aria-label="Sitios de Gran Berta">
             <a href="https://granbertafilms.com/" target="_blank" rel="noreferrer">
               GB FILMS
